@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/football_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/autour_one"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/team_a"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/team_a_yellow_card"
+                        style="@style/ScoreView"
+                        android:background="@color/yellowColor"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/team_a_red_card"
+                        style="@style/ScoreView"
+                        android:background="@color/redColor"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/team_a_penalty"
+                        style="@style/ScoreView"
+                        android:background="@color/pinkColor"
+                        android:text="0" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/team_a_goal_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:outlineSpotShadowColor="#FFFFFF"
+                    android:padding="4dp"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="56sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <Button
+                style="@style/Buttons"
+                android:background="@color/yellowColor"
+                android:onClick="addYellowForTeamA"
+                android:text="@string/yellow_card" />
+
+            <Button
+                style="@style/Buttons"
+                android:background="@color/redColor"
+                android:onClick="addRedForTeamA"
+                android:text="@string/red_card" />
+
+            <Button
+                style="@style/Buttons"
+                android:background="@color/pinkColor"
+                android:onClick="addPenaltyForTeamA"
+                android:text="@string/penalty" />
+
+
+            <Button
+                style="@style/Buttons"
+                android:background="@color/greenColor"
+                android:onClick="addGoalForTeamA"
+                android:text="@string/goal" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/autour_one"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/team_b"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/team_b_yellow_card"
+                        style="@style/ScoreView"
+                        android:background="@color/yellowColor"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/team_b_red_card"
+                        style="@style/ScoreView"
+                        android:background="@color/redColor"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/team_b_penalty"
+                        style="@style/ScoreView"
+                        android:background="@color/pinkColor"
+                        android:text="0" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/team_b_goal_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:outlineSpotShadowColor="#FFFFFF"
+                    android:padding="4dp"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="56sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <Button
+                style="@style/Buttons"
+                android:background="@color/yellowColor"
+                android:onClick="addYellowForTeamB"
+                android:text="@string/yellow_card" />
+
+            <Button
+                style="@style/Buttons"
+                android:background="@color/redColor"
+                android:onClick="addRedForTeamB"
+                android:text="@string/red_card" />
+
+            <Button
+                style="@style/Buttons"
+                android:background="@color/pinkColor"
+                android:onClick="addPenaltyForTeamB"
+                android:text="@string/penalty" />
+
+
+            <Button
+                style="@style/Buttons"
+                android:background="@color/greenColor"
+                android:onClick="addGoalForTeamB"
+                android:text="@string/goal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/resetBtn"
+        android:onClick="resetScore"
+        android:text="Reset" />
+
+</RelativeLayout>
+
+
